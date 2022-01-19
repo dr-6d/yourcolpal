@@ -19,11 +19,11 @@
 }
 
 .button-54 {
-  font-family: "Open Sans", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #000;
   cursor: pointer;
   border: 3px solid;
@@ -46,4 +46,9 @@
   .button-54 {
     padding: 0.25em 0.75em;
   }
+}
+
+* {
+  font-family: "Courier Prime", monospace, source-code-pro, Menlo, Monaco,
+    Consolas, "Courier New", monospace;
 }

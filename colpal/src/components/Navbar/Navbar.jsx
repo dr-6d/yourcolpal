@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-bootstrap";
 import { Navbar, Nav, Container } from "react-bootstrap";
+import "./nav.css";
 
 function NavBar() {
   return (

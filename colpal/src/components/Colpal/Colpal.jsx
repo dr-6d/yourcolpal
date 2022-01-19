@@ -15,6 +15,9 @@ const Colpal = () => {
   const [bool3, setBool3] = React.useState(true);
   const [bool4, setBool4] = React.useState(false);
   const [bool5, setBool5] = React.useState(true);
+  const styleObj = {
+    background: `linear-gradient(to right, )`,
+  };
 
   return (
     <>
@@ -22,22 +25,23 @@ const Colpal = () => {
         <Form.Group as={Row}>
           <Col m="6">
             <RangeSlider
+              style={styleObj}
               value={value1}
               onChange={(e) => {
                 setValue1(e.target.value);
                 console.log(e.target.value);
                 if (e.target.value == 2) {
                   setBool1(true);
-                  setBool2(false);
+                  setBool2(true);
                   setBool3(false);
                   setBool4(false);
-                  setBool5(true);
+                  setBool5(false);
                 } else if (e.target.value == 4) {
                   setBool1(true);
                   setBool2(true);
                   setBool3(true);
-                  setBool4(false);
-                  setBool5(true);
+                  setBool4(!false);
+                  setBool5(!true);
                 } else if (e.target.value == 5) {
                   setBool1(true);
                   setBool2(true);
@@ -46,10 +50,10 @@ const Colpal = () => {
                   setBool5(true);
                 } else if (e.target.value == 3) {
                   setBool1(true);
-                  setBool2(false);
+                  setBool2(!false);
                   setBool3(true);
                   setBool4(false);
-                  setBool5(true);
+                  setBool5(!true);
                 } else {
                   setBool1(true);
                   setBool2(false);
@@ -76,7 +80,7 @@ const Colpal = () => {
 };
 
 class Split extends Component {
-  constructor(props) {
+  constructor(props, children) {
     super(props);
     this.state = {
       index: Math.floor(Math.random() * masterList.length),
